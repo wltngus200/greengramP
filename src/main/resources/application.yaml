@@ -1,0 +1,32 @@
+spring:
+  datasource:
+    driver-class-name: org.mariadb.jdbc.Driver
+    url: jdbc:mariadb://localhost:3306/greengram2024_vp
+    username: root
+    password: green502
+  servlet:
+    multipart:
+      max-file-size: 5MB
+
+information:
+  greengram: D:\2024_BACK_JI\download\gram_practice
+
+mybatis:
+  mapper-locations: mappers/**/*.xml
+
+springdoc:
+  api-docs:
+    version: openapi_3_1
+    # schema를 좀 더 자세하게 보여줌
+  swagger-ui:
+    path: /swagger
+    # swagger에 접근하는 링크 간략화
+    operations-sorter: method
+    # 정렬 순서의 변경
+    default-model-expand-depth: 10
+    default-models-expand-depth: 10
+    # 하위 항목 표시 범위
+
+  cache:
+    disabled: true
+  # 캐시 삭제
