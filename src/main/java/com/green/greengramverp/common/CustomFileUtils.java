@@ -27,13 +27,14 @@ public class CustomFileUtils {
     }//1.파일의 이름을 받아온다
 
     public void transferTo(MultipartFile mf, String target) throws Exception{//에러를 꼭 감싸주어야 함
-        File shoot=new File(parentPath, target); // 파일에 경로를 저장
-        mf.transferTo(shoot);//파일을 변경하고 경로로 보냄
+        File upload=new File(parentPath, target); // 파일에 경로를 저장
+        //parentPath=경로 target=추가경로+fileName
+        mf.transferTo(upload);//파일을 변경하고 경로로 보냄
     }
 
     public void makeFolder(String path){
         File folder=new File(parentPath, path);
-        folder.mkdirs();
+        folder.mkdirs();//복수의 폴더 생성
     }
 
 
